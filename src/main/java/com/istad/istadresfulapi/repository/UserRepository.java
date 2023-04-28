@@ -22,14 +22,14 @@ public interface UserRepository {
 
 
     @Update("UPDATE users_tb SET username=#{user.username},gender=#{user.gender},address=#{user.address} WHERE id=#{id}")
-    int updateUser(@Param("user") User user,@Param("id") Integer id);
+    int updateUser(@Param("user") User user,@Param("id") int id);
 
     @Select("select * from users_tb where id = #{id}")
     User findUserById(int id);
 
 
     @Delete("DELETE FROM users_tb WHERE id=#{id}")
-    int removeUser(@Param("id") Integer id);
+    int removeUser(@Param("id") int id);
 
 
     @Results({

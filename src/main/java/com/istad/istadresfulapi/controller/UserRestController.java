@@ -59,7 +59,7 @@ public class UserRestController {
         }
         }
     @DeleteMapping("/remove/{id}")
-    Response<User> removeUser(@PathVariable("id")Integer id){
+    Response<User> removeUser(@PathVariable("id")int id){
         try {
             int result= userService.removeUser(id);
             if(result>0) {
@@ -74,7 +74,7 @@ public class UserRestController {
 
     }
     @GetMapping("/update/{id}")
-    Response<User> updateUser(@RequestBody User user,@PathVariable("id") Integer id){
+    Response<User> updateUser(@RequestBody User user,@PathVariable("id") int id){
         try {
             int result= userService.updateUser(user,id);
             if(result>0) {

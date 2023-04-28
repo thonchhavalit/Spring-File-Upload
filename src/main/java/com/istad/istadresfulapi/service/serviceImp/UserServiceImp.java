@@ -41,7 +41,7 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public int updateUser(User user, Integer id) {
+    public int updateUser(User user, int id) {
         return userRepository.updateUser(user,id);
     }
 
